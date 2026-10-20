@@ -1,0 +1,517 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><title>Imagine & Art Estofados</title>
+<meta name="description" content="Sofás sob medida há 10 anos. Pagamento na entrega e até 12x no cartão.">
+<meta property="og:title" content="Imagine & Art Estofados">
+<meta property="og:description" content="Sofás sob medida há 10 anos. Pagamento na entrega e até 12x no cartão.">
+</head><body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: faixas alternadas (espresso / greige / papel), cada uma com container central; hero em duas colunas com o configurador em planta baixa */
+:root{
+  --esp:#1C1512; --esp-2:#271E19; --esp-3:#33281F;
+  --brass:#C8A15A; --brass-soft:#E4CFA0;
+  --greige:#E9E4DD; --paper:#F6F3EF;
+  --ink:#1C1512; --muted:#6E6259; --on-dark:#EFE7DB; --on-dark-muted:#B3A595;
+  --line:rgba(28,21,18,.12); --line-dark:rgba(232,220,200,.14);
+  --f-display:"Gloock", "Bodoni 72", Didot, Georgia, serif;
+  --f-body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+  --gut-l:max(16px, env(safe-area-inset-left, 0px));
+  --gut-r:max(16px, env(safe-area-inset-right, 0px));
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.6 var(--f-body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--esp)}
+img,svg{max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.05;margin:0;text-wrap:balance;letter-spacing:-.01em}
+p{margin:0}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:var(--gut-l);padding-right:var(--gut-r)}
+.band{padding-block:clamp(64px,9vw,112px)}
+.dark{background:var(--esp);color:var(--on-dark)}
+.eyebrow{font:500 12px/1 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--brass)}
+.lede{font-size:clamp(17px,1.6vw,19px);max-width:52ch;color:var(--muted)}
+.dark .lede{color:var(--on-dark-muted)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:999px;font:600 15px/1 var(--f-body);text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .2s, background .2s, color .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn-brass{background:var(--brass);color:var(--esp)}
+.btn-brass:hover{background:var(--brass-soft)}
+.btn-ghost{border-color:var(--line-dark);color:var(--on-dark);background:transparent}
+.btn-ghost:hover{border-color:var(--brass);color:var(--brass-soft)}
+.btn-ink{background:var(--ink);color:var(--paper)}
+
+/* Header */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--esp) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-dark);color:var(--on-dark)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.badge{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--brass);display:grid;place-items:center;flex:none;background:var(--esp-2)}
+.brand b{display:block;font:400 21px/1 var(--f-display);color:var(--on-dark)}
+.brand small{display:block;font:500 10px/1.4 var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--brass)}
+nav.menu{display:flex;gap:28px;font-size:14px}
+nav.menu a{text-decoration:none;color:var(--on-dark-muted)}
+nav.menu a:hover{color:var(--on-dark)}
+@media (max-width:860px){nav.menu{display:none}}
+header .btn{padding:11px 18px;font-size:14px}
+
+/* Hero */
+.hero{padding-block:clamp(48px,7vw,88px) clamp(56px,8vw,96px);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:auto -10% -40% 40%;height:70%;background:radial-gradient(closest-side,rgba(200,161,90,.16),transparent);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:clamp(32px,5vw,72px);align-items:center;position:relative;z-index:1}
+@media (max-width:960px){.hero-grid{grid-template-columns:minmax(0,1fr)}}
+.hero h1{font-size:clamp(44px,6.6vw,84px);margin-block:20px 24px}
+.hero h1 em{font-style:normal;color:var(--brass)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.facts{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:40px;padding-top:24px;border-top:1px solid var(--line-dark)}
+.facts div{font-size:14px;color:var(--on-dark-muted)}
+.facts strong{display:block;font:400 28px/1.1 var(--f-display);color:var(--on-dark)}
+
+/* Configurador */
+.config{background:var(--esp-2);border:1px solid var(--line-dark);border-radius:20px;padding:clamp(16px,2.4vw,28px);display:grid;gap:20px}
+.config-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.config-head h2{font-size:24px}
+.config-head span{font:400 12px/1 var(--f-mono);color:var(--on-dark-muted);letter-spacing:.08em}
+.plan{background:var(--esp);border-radius:12px;border:1px solid var(--line-dark);background-image:linear-gradient(var(--line-dark) 1px,transparent 1px),linear-gradient(90deg,var(--line-dark) 1px,transparent 1px);background-size:24px 24px;background-position:-1px -1px}
+.plan svg{display:block;width:100%;height:auto}
+.dim{font:500 13px var(--f-mono);fill:var(--brass-soft)}
+.dim-line{stroke:var(--brass);stroke-width:1}
+.dim-sub{font:400 11px var(--f-mono);fill:var(--on-dark-muted)}
+.controls{display:grid;gap:16px}
+.ctl label,.ctl .lbl{display:flex;justify-content:space-between;font:500 11px/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--on-dark-muted);margin-bottom:10px}
+.ctl output{color:var(--brass-soft);font-variant-numeric:tabular-nums}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg button{font:500 14px/1 var(--f-body);padding:10px 14px;border-radius:999px;border:1px solid var(--line-dark);background:transparent;color:var(--on-dark);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--on-dark);color:var(--esp);border-color:var(--on-dark)}
+.swatches{display:flex;flex-wrap:wrap;gap:10px}
+.swatches button{width:34px;height:34px;border-radius:50%;border:2px solid var(--esp-2);box-shadow:0 0 0 1px var(--line-dark);cursor:pointer;background:var(--c)}
+.swatches button[aria-pressed="true"]{box-shadow:0 0 0 2px var(--brass)}
+input[type=range]{width:100%;accent-color:var(--brass)}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+@media (max-width:520px){.two{grid-template-columns:minmax(0,1fr)}}
+.summary{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding-top:16px;border-top:1px solid var(--line-dark)}
+.summary p{font-size:14px;color:var(--on-dark-muted);min-width:0}
+.summary p strong{color:var(--on-dark);font-weight:600}
+.toast{font:500 12px var(--f-mono);color:var(--brass-soft)}
+
+/* Promessas */
+.promises{background:var(--greige)}
+.promises .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;padding-block:8px}
+.promise{padding:28px 24px;display:grid;gap:8px;align-content:start;border-left:1px solid var(--line)}
+.promise:first-child{border-left:0;padding-left:0}
+.promise h3{font-size:22px}
+.promise p{font-size:14px;color:var(--muted)}
+.promise svg{color:var(--ink)}
+@media (max-width:860px){.promises .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}.promise{border-left:0;padding-left:0;border-top:1px solid var(--line)}.promise:nth-child(-n+2){border-top:0}}
+@media (max-width:460px){.promises .wrap{grid-template-columns:minmax(0,1fr)}.promise:nth-child(2){border-top:1px solid var(--line)}}
+
+/* Modelos */
+.sec-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px 48px;margin-bottom:48px}
+.sec-head h2{font-size:clamp(36px,4.6vw,58px);margin-top:14px;max-width:16ch}
+.models{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+@media (max-width:1000px){.models{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.models{grid-template-columns:minmax(0,1fr)}}
+.model{display:grid;grid-template-rows:auto auto 1fr auto;gap:10px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 16px 20px}
+.model .thumb{background:var(--greige);border-radius:10px;aspect-ratio:4/3;max-width:100%;display:grid;place-items:center;padding:14px}
+.model .thumb svg{width:100%;height:100%}
+.model h3{font-size:24px;margin-top:6px}
+.model p{font-size:14px;color:var(--muted)}
+.model .meta{font:400 12px var(--f-mono);color:var(--muted);letter-spacing:.04em}
+.model button{justify-self:start;margin-top:6px;background:none;border:0;padding:0;font:600 14px var(--f-body);color:var(--ink);cursor:pointer;border-bottom:1.5px solid var(--brass);padding-bottom:2px}
+.also{margin-top:28px;display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;font-size:15px;color:var(--muted)}
+.also strong{color:var(--ink);font-weight:600}
+
+/* Processo */
+.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;counter-reset:s;border-top:1px solid var(--line-dark)}
+@media (max-width:960px){.steps{grid-template-columns:minmax(0,1fr)}}
+.step{padding:28px 24px 8px 0;display:grid;gap:10px;align-content:start}
+@media (max-width:960px){.step{grid-template-columns:72px minmax(0,1fr);padding:24px 0;border-bottom:1px solid var(--line-dark)}.step .n{grid-row:span 2}}
+.step .n{font:400 44px/1 var(--f-display);color:var(--brass)}
+.step h3{font-size:22px}
+.step p{font-size:14px;color:var(--on-dark-muted)}
+
+/* Tecidos */
+.fabrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media (max-width:860px){.fabrics{grid-template-columns:minmax(0,1fr)}}
+.fabric{display:grid;gap:14px}
+.fabric .cloth{aspect-ratio:5/3;max-width:100%;border-radius:14px;position:relative;overflow:hidden}
+.fabric .cloth span{position:absolute;left:14px;bottom:12px;font:500 11px var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.85)}
+.cloth.linho{background-color:#B9AB95;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.12) 0 1px,transparent 1px 3px),repeating-linear-gradient(90deg,rgba(0,0,0,.08) 0 1px,transparent 1px 4px)}
+.cloth.veludo{background:radial-gradient(120% 90% at 30% 20%,#3A7598 0%,#1F4E6B 45%,#122F42 100%)}
+.cloth.suede{background-color:#8E5F38;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1.2px),radial-gradient(rgba(0,0,0,.08) 1px,transparent 1.2px);background-size:5px 5px,7px 7px;background-position:0 0,2px 3px}
+.fabric h3{font-size:26px}
+.fabric p{font-size:15px;color:var(--muted);max-width:42ch}
+
+/* CTA final */
+.final .wrap{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:40px;align-items:end}
+@media (max-width:860px){.final .wrap{grid-template-columns:minmax(0,1fr)}}
+.final h2{font-size:clamp(40px,5.4vw,72px)}
+.final h2 em{font-style:normal;color:var(--brass)}
+.contact{display:grid;gap:18px}
+.contact .row{display:flex;justify-content:space-between;gap:16px;padding-bottom:14px;border-bottom:1px solid var(--line-dark);font-size:15px}
+.contact .row span:first-child{font:500 11px var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--on-dark-muted);padding-top:3px}
+/* Animações */
+@keyframes subir{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes entrarLado{from{opacity:0;transform:translateX(28px)}to{opacity:1;transform:none}}
+@keyframes planIn{from{opacity:.35;transform:scale(.985)}to{opacity:1;transform:none}}
+@keyframes marcha{to{stroke-dashoffset:-18}}
+@keyframes respira{0%,100%{opacity:.7;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}}
+.hero-grid > div > *{animation:subir .7s cubic-bezier(.2,.7,.2,1) both}
+.hero-grid > div > :nth-child(2){animation-delay:.08s}
+.hero-grid > div > :nth-child(3){animation-delay:.16s}
+.hero-grid > div > :nth-child(4){animation-delay:.24s}
+.hero-grid > div > :nth-child(5){animation-delay:.32s}
+.config{animation:entrarLado .8s .2s cubic-bezier(.2,.7,.2,1) both}
+.hero::after{animation:respira 9s ease-in-out infinite}
+.plan svg{animation:planIn .35s ease-out}
+.plan .aberto{animation:marcha 1.2s linear infinite}
+.model{transition:translate .3s, box-shadow .3s}
+.model:hover{translate:0 -4px;box-shadow:0 14px 30px -18px rgba(28,21,18,.45)}
+.model .thumb svg{transition:transform .4s}
+.model:hover .thumb svg{transform:scale(1.04)}
+.fabric .cloth{transition:transform .4s}
+.fabric:hover .cloth{transform:scale(1.02)}
+.swatches button,.seg button{transition:background .2s,color .2s,box-shadow .2s,transform .2s}
+.swatches button:hover{transform:scale(1.1)}
+@supports (animation-timeline:view()){
+  .sec-head,.model,.step,.fabric,.promise,.final .wrap > *{animation:subir linear both;animation-timeline:view();animation-range:entry 0% entry 40%}
+}
+footer{background:var(--esp);color:var(--on-dark-muted);border-top:1px solid var(--line-dark);font-size:13px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:24px}
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Imagine & Art Estofados, início">
+      <span class="badge" aria-hidden="true">
+        <svg width="26" height="18" viewBox="0 0 26 18" fill="none" stroke="#C8A15A" stroke-width="1.4" stroke-linejoin="round"><path d="M4 8V4.5A2.5 2.5 0 0 1 6.5 2h13A2.5 2.5 0 0 1 22 4.5V8"/><path d="M2 14V9.5a1.5 1.5 0 0 1 3 0V11h16V9.5a1.5 1.5 0 0 1 3 0V14Z"/><path d="M4 14v2.5M22 14v2.5"/></svg>
+      </span>
+      <span><b>Imagine &amp; Art</b><small>Estofados sob medida</small></span>
+    </a>
+    <nav class="menu" aria-label="Seções">
+      <a href="#modelos">Modelos</a>
+      <a href="#processo">Como fazemos</a>
+      <a href="#tecidos">Tecidos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="btn btn-brass" href="#monte">Montar meu sofá</a>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="dark hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Fábrica própria · há 10 anos produzindo sonhos</p>
+      <h1>Seu sofá, na <em>medida exata</em> da sua sala.</h1>
+      <p class="lede">Você escolhe a largura, o modelo, o tecido e a cor. A gente fabrica, entrega e só então você paga.</p>
+      <div class="hero-cta">
+        <a class="btn btn-brass" href="#monte">Desenhar meu sofá</a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/imagineartestofados/" target="_blank" rel="noopener">Ver no Instagram</a>
+      </div>
+      <div class="facts">
+        <div><strong>10 anos</strong>de fábrica</div>
+        <div><strong>Na entrega</strong>você paga</div>
+        <div><strong>12x</strong>no cartão</div>
+      </div>
+    </div>
+
+    <form class="config" id="monte" aria-labelledby="cfg-title" onsubmit="return false">
+      <div class="config-head">
+        <h2 id="cfg-title">Monte seu sofá</h2>
+        <span>PLANTA · ESCALA 1:50</span>
+      </div>
+      <div class="plan" id="plan" role="img" aria-live="polite"></div>
+      <div class="controls">
+        <div class="ctl">
+          <span class="lbl">Modelo</span>
+          <div class="seg" id="seg-tipo"></div>
+        </div>
+        <div class="ctl">
+          <label for="largura">Largura <output id="out-largura" for="largura">260 cm</output></label>
+          <input type="range" id="largura" min="160" max="340" step="10" value="260">
+        </div>
+        <div class="two">
+          <div class="ctl">
+            <span class="lbl">Tecido</span>
+            <div class="seg" id="seg-tecido"></div>
+          </div>
+          <div class="ctl">
+            <span class="lbl">Cor <output id="out-cor">Azul petróleo</output></span>
+            <div class="swatches" id="sw-cor"></div>
+          </div>
+        </div>
+      </div>
+      <div class="summary">
+        <p id="resumo"></p>
+        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+          <span class="toast" id="toast" aria-live="polite"></span>
+          <button type="button" class="btn btn-brass" id="copiar">Copiar pedido</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="promises" aria-label="Nossas garantias">
+  <div class="wrap">
+    <div class="promise">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 20h22M3 20v-4M25 20v-4M8 20v-2M13 20v-3M18 20v-2"/><path d="M3 9h22M6 6l-3 3 3 3M22 6l3 3-3 3"/></svg>
+      <h3>Sob medida</h3>
+      <p>Largura, profundidade e modelo pensados para o seu espaço.</p>
+    </div>
+    <div class="promise">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 9h15v10H2zM17 12h5l4 4v3h-9"/><circle cx="7" cy="21" r="2"/><circle cx="21" cy="21" r="2"/></svg>
+      <h3>Pagamento na entrega</h3>
+      <p>Você paga quando o sofá chega na sua casa.</p>
+    </div>
+    <div class="promise">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="6" width="22" height="16" rx="2.5"/><path d="M3 11h22M7 17h5"/></svg>
+      <h3>Até 12x no cartão</h3>
+      <p>Parcele o sofá novo sem apertar o mês.</p>
+    </div>
+    <div class="promise">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 20.5V6.5A2.5 2.5 0 0 1 7.5 4h13A2.5 2.5 0 0 1 23 6.5v8a2.5 2.5 0 0 1-2.5 2.5H9z"/><path d="M9 9h10M9 12.5h6"/></svg>
+      <h3>Atendimento humanizado</h3>
+      <p>Você fala direto com quem fabrica o seu sofá.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="modelos">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow" style="color:var(--muted)">Modelos</p>
+        <h2>Cada modelo sai da fábrica no tamanho que você pedir.</h2>
+      </div>
+      <p class="lede">As plantas abaixo são exemplos. Toque em “Montar este” para levar o modelo ao desenho e ajustar as medidas.</p>
+    </div>
+    <div class="models" id="models"></div>
+    <p class="also"><strong>Também fabricamos</strong> mesas de jantar, cadeiras estofadas e poltronas avulsas.</p>
+  </div>
+</section>
+
+<section class="dark band" id="processo">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">Como nasce o seu sofá</p>
+        <h2>Da medida da parede até a sua sala.</h2>
+      </div>
+      <p class="lede">Tudo é feito na nossa fábrica, por gente que você pode conhecer pelo nome.</p>
+    </div>
+    <ol class="steps" style="list-style:none;margin:0;padding:0">
+      <li class="step"><span class="n">1</span><h3>Conversa e medidas</h3><p>Você manda a medida da parede e fotos do ambiente. A gente sugere o tamanho ideal.</p></li>
+      <li class="step"><span class="n">2</span><h3>Tecido e cor</h3><p>Escolha entre linho, veludo, suede e outras opções, com amostras de cor.</p></li>
+      <li class="step"><span class="n">3</span><h3>Estrutura</h3><p>A armação é montada na fábrica, já no tamanho do seu projeto.</p></li>
+      <li class="step"><span class="n">4</span><h3>Espuma e costura</h3><p>Assentos, encostos e acabamento feitos à mão, peça por peça.</p></li>
+      <li class="step"><span class="n">5</span><h3>Entrega</h3><p>Levamos até a sua casa. Você confere o sofá e só então paga.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band promises" id="tecidos" style="background:var(--greige)">
+  <div class="wrap" style="display:block;padding-block:0">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow" style="color:var(--muted)">Tecidos</p>
+        <h2>O toque também é sob medida.</h2>
+      </div>
+      <p class="lede">Cada tecido muda o jeito do sofá na sala. Pergunte pelas amostras no atendimento.</p>
+    </div>
+    <div class="fabrics">
+      <div class="fabric"><div class="cloth linho"><span>Linho</span></div><h3>Linho</h3><p>Trama aparente e aspecto natural. Combina com salas claras e decoração leve.</p></div>
+      <div class="fabric"><div class="cloth veludo"><span>Veludo</span></div><h3>Veludo</h3><p>Brilho suave e cor intensa. Fica bonito em azul, verde e vinho.</p></div>
+      <div class="fabric"><div class="cloth suede"><span>Suede</span></div><h3>Suede</h3><p>Toque macio e fosco, fácil de manter no dia a dia com crianças e pets.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark band final" id="contato">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Orçamento</p>
+      <h2 style="margin-top:16px">Mande a medida da sua parede. <em>A gente desenha o sofá.</em></h2>
+      <div class="hero-cta">
+        <a class="btn btn-brass" href="https://www.instagram.com/imagineartestofados/" target="_blank" rel="noopener">Falar pelo Instagram</a>
+        <a class="btn btn-ghost" href="#monte">Montar meu sofá</a>
+      </div>
+    </div>
+    <div class="contact">
+      <div class="row"><span>Instagram</span><span>@imagineartestofados</span></div>
+      <div class="row"><span>Pagamento</span><span>Na entrega · até 12x no cartão</span></div>
+      <div class="row"><span>Experiência</span><span>Há 10 anos produzindo sofás</span></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Imagine &amp; Art Estofados</span>
+    <span>Sofás personalizados sob medida</span>
+  </div>
+</footer>
+
+<script>
+const CORES = {
+  areia:['Areia','#CDBBA0'], gelo:['Gelo','#D6D2CB'], grafite:['Grafite','#55514D'],
+  petroleo:['Azul petróleo','#1F4E6B'], vinho:['Vinho','#7A1F2B'], caramelo:['Caramelo','#A8703F']
+};
+const TECIDOS = {linho:'Linho', veludo:'Veludo', suede:'Suede'};
+const TIPOS = {
+  retratil:{nome:'Retrátil e reclinável', min:160},
+  canto:{nome:'De canto (L)', min:220},
+  chaise:{nome:'Com chaise', min:220}
+};
+const state = {tipo:'retratil', largura:260, tecido:'veludo', cor:'petroleo'};
+
+// Gera as peças do sofá em centímetros (vista de cima)
+function pecas(tipo, W){
+  const A = 18, E = 20, gap = 2;
+  const p = [], ext = [];
+  let H, D = tipo === 'retratil' ? 95 : 90;
+  const assentos = (x0, x1, y, h) => {
+    const len = x1 - x0, n = Math.max(1, Math.round(len / 68));
+    const w = (len - gap * (n - 1)) / n;
+    for (let i = 0; i < n; i++) p.push({x:x0 + i*(w+gap), y, w, h, k:'seat'});
+    return {n, w};
+  };
+  if (tipo === 'canto') {
+    const L2 = 210; H = L2;
+    p.push({x:0,y:0,w:W,h:E,k:'frame'}, {x:0,y:0,w:E,h:L2,k:'frame'});
+    p.push({x:W-A,y:0,w:A,h:D,k:'frame'}, {x:0,y:L2-A,w:D,h:A,k:'frame'});
+    p.push({x:E,y:E,w:D-E,h:D-E,k:'seat'});
+    assentos(D+gap, W-A, E, D-E);
+    const len = L2 - A - D - gap, m = Math.max(1, Math.round(len/68)), hh = (len - gap*(m-1))/m;
+    for (let i=0;i<m;i++) p.push({x:E,y:D+gap+i*(hh+gap),w:D-E,h:hh,k:'seat'});
+  } else if (tipo === 'chaise') {
+    const C = 95, CL = 165; H = CL;
+    p.push({x:0,y:0,w:W,h:E,k:'frame'}, {x:0,y:0,w:A,h:D,k:'frame'}, {x:W-A,y:0,w:A,h:CL,k:'frame'});
+    assentos(A, W-A-C-gap, E, D-E);
+    p.push({x:W-A-C,y:E,w:C,h:CL-E,k:'seat'});
+  } else if (tipo === 'poltrona') {
+    H = D;
+    p.push({x:0,y:0,w:W,h:E,k:'frame'}, {x:0,y:0,w:A,h:D,k:'frame'}, {x:W-A,y:0,w:A,h:D,k:'frame'});
+    p.push({x:A,y:E,w:W-2*A,h:D-E,k:'seat'});
+  } else {
+    H = D + 50;
+    p.push({x:0,y:0,w:W,h:E,k:'frame'}, {x:0,y:0,w:A,h:D,k:'frame'}, {x:W-A,y:0,w:A,h:D,k:'frame'});
+    const r = assentos(A, W-A, E, D-E);
+    for (let i=0;i<r.n;i++) ext.push({x:A+i*(r.w+gap), y:D, w:r.w, h:50});
+  }
+  const nAssentos = p.filter(q => q.k === 'seat').length;
+  return {p, ext, D, H, nAssentos};
+}
+
+function tex(id, tecido){
+  if (tecido === 'linho') return `<pattern id="${id}" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 .5h4M.5 0v4" stroke="#fff" stroke-opacity=".14" stroke-width=".6"/></pattern>`;
+  if (tecido === 'suede') return `<pattern id="${id}" width="5" height="5" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".6" fill="#fff" fill-opacity=".1"/><circle cx="3.5" cy="3.2" r=".6" fill="#000" fill-opacity=".1"/></pattern>`;
+  return `<linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".18"/></linearGradient>`;
+}
+
+let uid = 0;
+function planta({tipo, largura:W, cor, tecido, cotas = true, escalaFixa = true}){
+  const {p, ext, D, H} = pecas(tipo, W);
+  const VW = 640, VH = cotas ? 420 : 300;
+  const padL = cotas ? 40 : 12, padT = cotas ? 64 : 12, padR = cotas ? 110 : 12, padB = cotas ? 30 : 12;
+  const s = escalaFixa ? Math.min((VW-padL-padR)/340, (VH-padT-padB)/215)
+                       : Math.min((VW-padL-padR)/W, (VH-padT-padB)/H);
+  const ox = padL + ((VW-padL-padR) - W*s)/2, oy = padT + ((VH-padT-padB) - H*s)/2;
+  const id = 't' + (uid++), hex = CORES[cor][1], r = 4*s;
+  const R = q => `x="${(ox+q.x*s).toFixed(1)}" y="${(oy+q.y*s).toFixed(1)}" width="${(q.w*s).toFixed(1)}" height="${(q.h*s).toFixed(1)}" rx="${r.toFixed(1)}"`;
+  let out = `<svg viewBox="0 0 ${VW} ${VH}" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>${tex(id, tecido)}</defs>`;
+  out += `<ellipse cx="${ox+W*s/2}" cy="${oy+H*s*0.55}" rx="${W*s*0.56}" ry="${H*s*0.6}" fill="#000" fill-opacity=".18"/>`;
+  ext.forEach(q => out += `<rect class="aberto" ${R(q)} fill="none" stroke="${cotas ? '#C8A15A' : hex}" stroke-opacity=".7" stroke-dasharray="5 4" stroke-width="1.2"/>`);
+  p.forEach(q => {
+    out += `<rect ${R(q)} fill="${hex}"/>`;
+    if (q.k === 'frame') out += `<rect ${R(q)} fill="#000" fill-opacity=".2"/>`;
+    out += `<rect ${R(q)} fill="url(#${id})" stroke="#000" stroke-opacity=".25" stroke-width="1"/>`;
+  });
+  if (cotas) {
+    const y = oy - 28, x0 = ox, x1 = ox + W*s;
+    out += `<line class="dim-line" x1="${x0}" y1="${y}" x2="${x1}" y2="${y}"/><line class="dim-line" x1="${x0}" y1="${y-6}" x2="${x0}" y2="${y+6}"/><line class="dim-line" x1="${x1}" y1="${y-6}" x2="${x1}" y2="${y+6}"/>`;
+    out += `<rect x="${(x0+x1)/2-38}" y="${y-11}" width="76" height="22" rx="4" fill="#1C1512"/><text class="dim" x="${(x0+x1)/2}" y="${y+5}" text-anchor="middle">${W} cm</text>`;
+    const xv = x1 + 26, ya = oy, yb = oy + D*s;
+    out += `<line class="dim-line" x1="${xv}" y1="${ya}" x2="${xv}" y2="${yb}"/><line class="dim-line" x1="${xv-6}" y1="${ya}" x2="${xv+6}" y2="${ya}"/><line class="dim-line" x1="${xv-6}" y1="${yb}" x2="${xv+6}" y2="${yb}"/>`;
+    out += `<text class="dim" x="${xv+10}" y="${(ya+yb)/2+4}">${D} cm</text>`;
+    if (tipo === 'retratil') out += `<text class="dim-sub" x="${xv+10}" y="${(ya+yb)/2+20}">${D+50} aberto</text>`;
+    if (tipo === 'canto') out += `<text class="dim-sub" x="${ox}" y="${oy+H*s+20}">lateral 210 cm</text>`;
+    if (tipo === 'chaise') out += `<text class="dim-sub" x="${x1+10}" y="${oy+H*s}">chaise 165 cm</text>`;
+  }
+  return out + '</svg>';
+}
+
+const $ = id => document.getElementById(id);
+function resumoTexto(){
+  const n = pecas(state.tipo, state.largura).nAssentos;
+  return `Sofá ${TIPOS[state.tipo].nome.toLowerCase()}, ${state.largura} cm de largura, ${n} assentos, ${TECIDOS[state.tecido].toLowerCase()} ${CORES[state.cor][0].toLowerCase()}`;
+}
+function render(){
+  const t = TIPOS[state.tipo];
+  const r = $('largura');
+  r.min = t.min;
+  if (state.largura < t.min) state.largura = t.min;
+  r.value = state.largura;
+  $('out-largura').textContent = state.largura + ' cm';
+  $('out-cor').textContent = CORES[state.cor][0];
+  $('plan').innerHTML = planta(state);
+  $('plan').setAttribute('aria-label', 'Planta do sofá: ' + resumoTexto());
+  const n = pecas(state.tipo, state.largura).nAssentos;
+  $('resumo').innerHTML = `<strong>${t.nome}</strong> · ${state.largura} cm · ${n} assentos · ${TECIDOS[state.tecido]} ${CORES[state.cor][0].toLowerCase()}`;
+  document.querySelectorAll('[data-tipo]').forEach(b => b.setAttribute('aria-pressed', b.dataset.tipo === state.tipo));
+  document.querySelectorAll('[data-tecido]').forEach(b => b.setAttribute('aria-pressed', b.dataset.tecido === state.tecido));
+  document.querySelectorAll('[data-cor]').forEach(b => b.setAttribute('aria-pressed', b.dataset.cor === state.cor));
+}
+
+$('seg-tipo').innerHTML = Object.entries(TIPOS).map(([k,v]) => `<button type="button" data-tipo="${k}">${v.nome}</button>`).join('');
+$('seg-tecido').innerHTML = Object.entries(TECIDOS).map(([k,v]) => `<button type="button" data-tecido="${k}">${v}</button>`).join('');
+$('sw-cor').innerHTML = Object.entries(CORES).map(([k,[n,h]]) => `<button type="button" data-cor="${k}" style="--c:${h}" aria-label="${n}" title="${n}"></button>`).join('');
+
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-tipo],[data-tecido],[data-cor]');
+  if (!b) return;
+  Object.assign(state, b.dataset.tipo ? {tipo:b.dataset.tipo} : b.dataset.tecido ? {tecido:b.dataset.tecido} : {cor:b.dataset.cor});
+  if (b.closest('.model')) $('monte').scrollIntoView({behavior:'smooth', block:'start'});
+  render();
+});
+$('largura').addEventListener('input', e => { state.largura = +e.target.value; render(); });
+
+$('copiar').addEventListener('click', () => {
+  const txt = `Olá! Quero um orçamento: ${resumoTexto()}.`;
+  const ok = () => { $('toast').textContent = 'Pedido copiado'; setTimeout(() => $('toast').textContent = '', 2500); };
+  const fallback = () => {
+    $('resumo').textContent = txt;
+    const sel = getSelection(), range = document.createRange();
+    range.selectNodeContents($('resumo')); sel.removeAllRanges(); sel.addRange(range);
+    $('toast').textContent = 'Texto selecionado, copie com Ctrl+C';
+  };
+  try { navigator.clipboard.writeText(txt).then(ok, fallback); } catch { fallback(); }
+});
+
+// Cartões de modelos com plantas de exemplo
+const exemplos = [
+  {tipo:'retratil', largura:250, cor:'grafite', tecido:'suede', nome:'Retrátil e reclinável', txt:'Assentos que deslizam para a frente e encostos que reclinam. O favorito para assistir filmes.', meta:'95 cm fechado · 145 cm aberto'},
+  {tipo:'canto', largura:280, cor:'petroleo', tecido:'veludo', nome:'De canto', txt:'Formato em L que aproveita o canto da sala e acomoda a família inteira.', meta:'Lateral de 210 cm'},
+  {tipo:'chaise', largura:260, cor:'areia', tecido:'linho', nome:'Com chaise', txt:'Um lado alongado para esticar as pernas sem precisar de puff.', meta:'Chaise de 165 cm'},
+  {tipo:'poltrona', largura:90, cor:'vinho', tecido:'veludo', nome:'Poltronas', txt:'Peça avulsa para completar a sala ou criar um canto de leitura.', meta:'A partir de 80 cm'}
+];
+$('models').innerHTML = exemplos.map(m => `
+  <article class="model">
+    <div class="thumb">${planta({...m, cotas:false, escalaFixa:false})}</div>
+    <h3>${m.nome}</h3>
+    <p>${m.txt}</p>
+    <div style="display:grid;gap:8px;align-content:end">
+      <span class="meta">${m.meta}</span>
+      ${m.tipo in TIPOS ? `<button type="button" data-tipo="${m.tipo}">Montar este</button>` : `<a class="meta" style="color:var(--ink)" href="#contato">Pedir orçamento</a>`}
+    </div>
+  </article>`).join('');
+
+render();
+</script>
+
+</body></html>
